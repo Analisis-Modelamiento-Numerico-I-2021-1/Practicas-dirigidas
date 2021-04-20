@@ -1,0 +1,137 @@
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','log','nav',
+% arara: --> 'out','snm','toc','pdf']
+% arara: --> }
+% arara: lualatex: {
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','log','nav',
+% arara: --> 'out','snm','toc']
+% arara: --> }
+\documentclass{beamer}
+
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{array}
+
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+\newcounter{savedenum}
+\newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
+\newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}
+
+\begin{document}
+
+\begin{frame}
+
+	\begin{enumerate}
+		\item Escribir el número decimal correspondiente a los siguientes números
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item ${1101110}_{2}$.
+				      \item $1101110,01_{2}$.
+				      \item ${100111,101}_{2}$.
+				      \item ${101101,001}_{2}$.
+			      \end{enumerate}
+		      \end{multicols}
+		\item Escribir en base $2$ los siguientes números dados en base $10$.
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item $2324,6$.
+				      \item $3475,52$.
+				      \item $45632$.
+				      \item $1234,83$.
+			      \end{enumerate}
+		      \end{multicols}
+		\item Si tenemos $\beta=10$, $N=11$ y $k=6$. Entonces, disponemos de $k=6$ dígitos para la parte fraccionaria y $N-k-1$ dígitos para la parte entera. Escribe la representación de los siguientes números:
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item $38,214$.
+				      \item $40,9561$.
+				      \item $-0,000876$.
+				      \item $0,952$.
+			      \end{enumerate}
+		      \end{multicols}
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+		\item Sea la longitud de palabra de $N=4$ bits, genere una tabla que muestre la representación decimal de los números $+7,+6,+5,+4,+3,+2,+1,+0,-0,-1,-2,-3,-4,-5,-6,-7$ y $-8$ en la representación de su signo-magnitud y complemento a dos. Es decir
+		      \begin{table}[ht!]
+			      \centering
+			      \begin{tabular}{|x{2.5cm}|x{2.5cm}|x{3.1cm}|}
+				      \hline
+				      Representación decimal & Representación signo-magnitud & Representación complemento a dos \\
+				      \hline$+7$             & $0111$                        & $0111$                           \\
+				      \hline
+			      \end{tabular}
+		      \end{table}
+		\item Realice las operaciones aritmética con enteros complemento a dos con una longitud de palabra de $N=4$ bits para las siguientes operaciones:
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item $1001+0101$.
+				      \item $1100+0100$.
+				      \item $0011+0100$.
+				      \item $1100+1111$
+			      \end{enumerate}
+		      \end{multicols}
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+		\item Usando la idea de ítem anterior donde se produce desbordamiento entero de:
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item $0101+0100$.
+				      \item $1001+1010$.
+			      \end{enumerate}
+		      \end{multicols}
+		\item Sean $a=0,000063381158$, $b=73,688329$ y $c=-73,687711$. Determine la aritmética de punto flotante para:
+		      \begin{multicols}{3}
+			      \begin{enumerate}[a)]
+				      \item $a+(b+c)$.
+				      \item $(a+b)+c$.
+				      \item $a+b+c$.
+			      \end{enumerate}
+		      \end{multicols}
+		\item Si tenemos $\beta=2, t=3, L=-2$ y $U=2$.
+		      \begin{enumerate}[a)]
+			      \item Determine el intervalo donde se representa los números reales.
+			      \item Determine la cantidad de números reales que tiene dicho intervalo.
+			      \item Determine los números de máquina que contiene dicho intervalo.
+		      \end{enumerate}
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+		\item Si tenemos $\beta=2$, $t=3$, $L=-1$ y $U=2$.
+		      \begin{enumerate}[a)]
+			      \item Determine el intervalo donde se representa los números reales.
+			      \item Determine la cantidad de números reales que tiene dicho intervalo.
+			      \item Determine los números de máquina que contiene dicho intervalo.
+		      \end{enumerate}
+		\item Usando el ítem 8 parte c), determine:
+		      \begin{multicols}{4}
+			      \begin{enumerate}[a)]
+				      \item $\dfrac{24}{32}\oplus\dfrac{7}{32}$.
+				      \item $\dfrac{24}{32}\ominus\dfrac{7}{32}$.
+				      \item $\dfrac{24}{32}\otimes\dfrac{7}{32}$.
+				      \item $\dfrac{24}{32}\oslash\dfrac{7}{32}$.
+			      \end{enumerate}
+		      \end{multicols}
+	\end{enumerate}
+\end{frame}
+
+\end{document}
