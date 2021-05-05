@@ -1,0 +1,663 @@
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','log','nav',
+% arara: --> 'out','snm','toc','pdf']
+% arara: --> }
+% arara: lualatex: {
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','log','nav',
+% arara: --> 'out','snm','toc']
+% arara: --> }
+\PassOptionsToPackage{svgnames}{xcolor}
+\documentclass[
+	spanish,
+	9pt,
+	utf8,
+	xcolor=table,
+	handout,
+	aspectratio=1610,
+	professionalfonts,
+	notheorems,
+	mathserif,
+	% t
+]{beamer}
+
+\usepackage[spanish,es-sloppy]{babel}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{array}
+
+\newcounter{savedenum}
+\newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
+\newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\begin{document}
+
+\begin{frame}
+
+	\begin{enumerate}
+		\item
+		      Determine la notación de Landau de las siguientes funciones.
+
+		      \begin{multicols}{4}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            $\dfrac{1}{n^{2}}$.
+
+				      \item
+
+				            $\cos\left(n\right)$.
+
+				      \item
+
+				            $\sin\left(\dfrac{x}{n}\right)$.
+
+				      \item
+
+				            $\sqrt{n+1}-\sqrt{n}$.
+			      \end{enumerate}
+		      \end{multicols}
+
+		\item
+		      La pérdida de cifras significativas se puede evitar reordenando los cálculos.
+		      Determine en los siguientes casos una forma equivalente que evite la pérdida de cifras significativas para valores indicados de $x$.
+
+		      \begin{multicols}{4}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            $\ln\left(x+1\right)-\ln\left(x\right)$.
+
+				      \item
+
+				            $\sqrt{x^{2}+1}-x$.
+
+				      \item
+				            $1-\cos\left(x\right)$.
+
+				      \item
+
+				            $\sin\left(x\right)-x$.
+			      \end{enumerate}
+		      \end{multicols}
+
+		\item
+		      Sea $f\colon\mathbb{R}^{n}\to\mathbb{R}$ definida por
+
+		      \begin{multicols}{3}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            $f\left(x\right)=\dfrac{x}{4}$, $n=1$.
+
+				      \item
+
+				            $f\left(x\right)=\sqrt{x}$, $n=1$.
+
+				      \item
+
+				            $f\left(x_{1},x_{2}\right)=x_{1}\cdot x_{2}$, $n=2$.
+			      \end{enumerate}
+		      \end{multicols}
+
+		      Determine el número de condición.
+
+		\item
+		      En un aparcamiento hay $55$ vehículos entre coches y motos.
+		      Si el total de ruedas es de $170$.
+		      Determine
+
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item
+				            Modele el problema.
+
+				      \item
+				            Determine la norma matricial de $A$.
+
+
+
+				      \item
+				            Determine el número de condicionamiento de $A$.
+
+				      \item
+				            Indique si está bien o mal condicionado.
+			      \end{enumerate}
+		      \end{multicols}
+
+		      \
+
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+
+		\item
+		      Un fabricante de bombillas gana $0,3$ dólares por cada bombilla que sale de la fábrica, pero pierde
+		      $0,4$ dolares por cada una que sale defectuosa.
+		      Un día en el que fabricó $2100$ bombillas obtuvo
+		      un beneficio de $484,4$ dólares.
+		      Determine el número de bombillas buenas y defectuosa según el requerimiento siguiente.
+
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            Modele el problema.
+
+				      \item
+
+				            Determine la norma matricial de $A$.
+
+				      \item
+
+				            Determine el número de condicionamiento de $A$.
+
+				      \item
+
+				            Indique si está bien o mal condicionado.
+			      \end{enumerate}
+		      \end{multicols}
+
+		\item
+		      Sean dos números tales que la suma de un tercio del primero más un quinto del segundo sea igual
+		      a $13$ y que si se multiplica el primero por $5$ y el segundo por $7$ se obtiene $247$ como suma de los dos productos.
+		      Determine los números según el requerimiento siguiente.
+
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            Modele el problema.
+
+				      \item
+
+				            Determine la norma matricial de $A$ y $A^{-1}$.
+
+				      \item
+
+				            Determine el condicionamiento de $A$.
+
+				      \item
+
+				            Resolver el sistema usando eliminación de Gauß.
+			      \end{enumerate}
+		      \end{multicols}
+
+		\item
+		      El perímetro de un rectángulo es $64$ cm y la diferencia entre las medidas de la base y la altura es $6$ cm.
+		      Determine las dimensiones de dicho rectángulo según el requerimiento siguiente.
+
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            Modele el problema.
+
+				      \item
+
+				            Determine la norma matricial de $A$ y $A^{-1}$.
+
+				      \item
+
+				            Determine el condicionamiento de $A$.
+
+				      \item
+
+				            Resolver el sistema usando eliminación de Gauß.
+			      \end{enumerate}
+		      \end{multicols}
+
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+
+		\item
+		      Dos kilos de plátanos y tres de peras cuestan $8,80$ soles.
+		      Cinco kilos de plátanos y cuatro de peras
+		      cuestan $16,40$ soles.
+		      Determine el costo de kilo del plátano y de la pera según el requerimiento siguiente.
+
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            Modele el problema.
+
+				      \item
+
+				            Determine la norma matricial de $A$ y $A^{-1}$.
+
+				      \item
+
+				            Determine el condicionamiento de $A$.
+
+				      \item
+
+				            Resolver el sistema usando eliminación de Gauß con pivoteo.
+			      \end{enumerate}
+		      \end{multicols}
+
+		\item
+		      La edad de Manuel es el doble de la edad de su hija Ana.
+		      Hace diez años, la suma de las edades de
+		      ambos era igual a la edad actual de Manuel.
+		      Determine la edad de ambos según el requerimiento siguiente.
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            Modele el problema.
+
+				      \item
+
+				            Determine la norma matricial de $A$ y $A^{-1}$.
+
+				      \item
+
+				            Determine el condicionamiento de $A$.
+
+				      \item
+
+				            Resolver el sistema usando eliminación de Gauß-Jordan.
+			      \end{enumerate}
+		      \end{multicols}
+
+		\item
+		      José dice a Eva: mi colección de discos compactos es mejor que la tuya ya que si te cedo $10$ tendríamos
+		      la misma cantidad.
+		      Eva le responde: reconozco que tienes razón.
+		      Solo te faltan $10$ para doblarme en número.
+		      Determine la cantidad de discos que tiene cada uno según el requerimiento siguiente.
+
+		      \begin{multicols}{2}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            Modele el problema.
+
+				      \item
+
+				            Determine la norma matricial de $A$ y $A^{-1}$.
+
+				      \item
+
+				            Determine el condicionamiento de $A$.
+
+				      \item
+
+				            Resolver el sistema usando eliminación de Gauß-Jordan.
+			      \end{enumerate}
+		      \end{multicols}
+
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+
+		\item
+
+		      Dada la sucesión
+		      \begin{math}
+			      u_{n+1}=
+			      2003-
+			      \dfrac{6002}{u_{n}}+
+			      \dfrac{4000}{u_{n}u_{n-1}}
+		      \end{math}.
+
+		      \begin{enumerate}[a)]
+			      \item
+
+			            Opcional Muestre, brevemente, que la solución general es de la forma
+			            \begin{math}
+				            v_{n}=
+				            \dfrac{
+					            \alpha+
+					            \beta 2^{n+1}+
+					            \gamma 2000^{n+1}
+				            }{
+					            \alpha+
+					            \beta 2^{n}+
+					            \gamma 2^{n}}
+			            \end{math}
+
+			      \item
+
+			            Verifique que $\gamma=0$ para $u_{0}=\dfrac{3}{2}$ y $u_{1}=\dfrac{5}{3}$.
+
+			      \item
+
+			            Realice su código en \texttt{python} y verifique que $u_{n}$ converge computacionalmente hacia 2000, verifique si esto es correcto con el límite teórico.
+
+			      \item
+
+			            Analice la propagación de errores y clasifique el tipo de error.
+		      \end{enumerate}
+
+		\item
+		      Dada la sucesión de Fibonacci $F_{n}$ definida por $F_{0}=F_{1}=1 \mathrm{y}$ su regla $F_{n+1}=F_{n}+F_{n-1}$.
+
+		      \begin{enumerate}[a)]
+			      \item
+
+			            Analice la propagación de errores y clasifique el tipo de error.
+		      \end{enumerate}
+
+		\item
+		      Construir las siguientes matrices de $N\times N$
+
+		      \begin{equation*}\small
+			      A_{1}=
+			      \begin{pmatrix}
+				      2  & -1     &        &        & 0  \\
+				      -1 & 2      & -1     &        & 0  \\
+				         & \ddots & \ddots & \ddots &    \\
+				         &        & -1     & 2      & -1 \\
+				      0  &        &        & -1     & 2
+			      \end{pmatrix},
+			      A_{2}=
+			      \begin{pmatrix}
+				      16 / 3 & -8 / 3 & 0      &        & 0      &        &        & 0      \\
+				      -8 / 3 & 14 / 3 & -8 / 3 & 1 / 3  & 0      &        &        &        \\
+				      0      & -8 / 3 & 16 / 3 & -8 / 3 & 0      &        &        &        \\
+				      0      & 1 / 3  & -8 / 3 & 14 / 3 & -8 / 3 & 1 / 3  & 0      &        \\
+				             & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots &        \\
+				      0      &        &        & 0      & -8 / 3 & 16 / 3 & -8 / 3 & 0      \\
+				      0      &        &        & 0      & 1 / 3  & -8 / 3 & 14 / 3 & -8 / 3 \\
+				      0      &        &        &        &        & 0      & -8 / 3 & 16 / 3
+			      \end{pmatrix},
+		      \end{equation*}
+
+
+		      \begin{enumerate}[a)]
+			      \item
+
+			            Determine el número de condición para $N=8$ para cada matriz.
+
+			      \item
+
+			            Determine el número de condición para $N=12$ para cada matriz.
+
+			      \item
+
+			            Determine el número de condición para $N=14$ para cada matriz.
+		      \end{enumerate}
+
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+
+		\item
+		      Dada la ecuación $Ax=b$:
+
+		      \begin{equation*}
+			      \begin{pmatrix}
+				      10 & 7 & 8  & 7  \\
+				      7  & 5 & 6  & 5  \\
+				      8  & 6 & 10 & 9  \\
+				      7  & 5 & 9  & 10
+			      \end{pmatrix}
+			      \begin{pmatrix}
+				      x_{1} \\
+				      x_{2} \\
+				      x_{3} \\
+				      x_{4}
+			      \end{pmatrix}=
+			      \begin{pmatrix}
+				      32 \\
+				      23 \\
+				      33 \\
+				      31
+			      \end{pmatrix}
+		      \end{equation*}
+
+		      \begin{enumerate}[a)]
+			      \item
+
+			            Determine la inversa de $A$, su determinante, y verifique si es simétrica y definida positiva, de
+			            manera similar determine su solución.
+
+			      \item
+
+			            Resuelva la ecuación matricial perturbando $b^{T}=\left(32,122,933,130,9\right)$.
+
+			      \item
+
+			            Resuelva ahora con la perturbación
+			            \begin{equation*}
+				            \begin{pmatrix}
+					            10   & 7    & 8,1  & 7,2  \\
+					            7,08 & 5,04 & 6    & 5    \\
+					            8    & 5,98 & 9,89 & 9    \\
+					            6,99 & 4,99 & 9    & 9,98
+				            \end{pmatrix}
+				            \begin{pmatrix}
+					            x_{1} \\
+					            x_{2} \\
+					            x_{3} \\
+					            x_{4}
+				            \end{pmatrix}=
+				            \begin{pmatrix}
+					            32 \\
+					            23 \\
+					            33 \\
+					            31
+				            \end{pmatrix}
+			            \end{equation*}
+
+			      \item
+
+			            Explique claramente lo determinado en los ítemes anteriores.
+		      \end{enumerate}
+
+		\item
+
+		      Sea $A$ una matriz cuadrada invertible y $\alpha\in\mathbb{R}$.
+		      Demuestre:
+		      \begin{math}
+			      \kappa\left(A\right)=
+			      \kappa\left(\alpha A\right)=
+			      \kappa\left(A^{-1}\right)
+		      \end{math}.
+
+		\item
+		      Denotamos por
+		      \begin{math}
+			      {\left\|A\right\|}_{2}=
+			      \sqrt{\rho\left(A^{T}A\right)}
+		      \end{math}
+		      donde
+		      \begin{math}
+			      \rho\left(B\right)=
+			      \max_{1\leq i\leq n}
+			      \left|\lambda_{i}\left(B\right)\right|
+		      \end{math}
+		      y
+		      \begin{math}
+			      {\left(
+				      \lambda_{i}\left(B\right)
+				      \right)}_{
+				      1\leq i\leq n
+			      }
+		      \end{math}
+		      es el conjunto de los valores propios de $B$.
+		      Con esta norma definimos el condicionamiento
+		      \begin{math}
+			      \kappa_{2}=
+			      {\left\|A\right\|}_{2}{
+			      \left\|A^{-1}\right\|
+			      }_{2}
+		      \end{math}.
+		      Demostrar que:
+
+		      \begin{enumerate}[a)]
+			      \item
+
+			            \begin{math}
+				            \kappa_{2}
+				            \left(A\right)=
+				            \kappa_{2}
+				            \left(A^{T}\right)
+			            \end{math}.
+		      \end{enumerate}
+
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\resume
+
+		\item
+
+		      Sean
+		      \begin{math}
+			      A=
+			      \begin{pmatrix}
+				      a & b \\ c & d
+			      \end{pmatrix}
+		      \end{math}
+		      definida positiva y $\alpha,\beta\in\mathbb{R}^{+}$.
+		      Denotamos
+		      \begin{math}
+			      \Delta=
+			      \begin{pmatrix}
+				      \alpha & 0 \\ 0 & \beta
+			      \end{pmatrix}
+		      \end{math},
+		      definimos también
+		      \begin{math}
+			      D=
+			      \begin{pmatrix}
+				      a & 0 \\ 0 & b
+			      \end{pmatrix}
+		      \end{math}.
+		      Mostrar que para cualquier elección de $\alpha$ y $\beta$ tenemos:
+
+		      \begin{multicols}{3}
+			      \begin{enumerate}[a)]
+				      \item
+
+				            \begin{math}
+					            \kappa_{2}
+					            \left(D^{-1}A\right)\leq
+					            \kappa_{2}
+					            \left(\Delta^{-1}A\right)
+				            \end{math},
+
+				      \item
+
+				            \begin{math}
+					            \kappa_{2}
+					            \left(D^{-1}A\right)\leq
+					            \kappa_{2}
+					            \left(A\right)
+				            \end{math},
+
+				      \item
+
+				            \begin{math}
+					            \kappa_{2}
+					            \left(D\right)\leq
+					            \kappa_{2}
+					            \left(A\right)
+				            \end{math}.
+			      \end{enumerate}
+		      \end{multicols}
+
+		\item
+		      Sobre el método de Doolitle.
+
+		      \begin{enumerate}[a)]
+
+			      \item
+
+			            Implementar dicho método en \texttt{python} llamado \texttt{doolitle}.
+
+			      \item
+
+			            Crear matrices $L_{n}$ y $U_{n}$ de orden $n\times n$ para $n=3,4,\dotsc,15$ como las mencionadas en el teorema $3$ del tema factorización $LU$ de la semana $3$, luego almacenar $A_{n}=L_{n}U_{n}$.
+
+			      \item
+
+			            Obtener la complejidad de dicho algoritmo de forma teórica.
+
+			      \item
+
+			            Del ítem b.
+			            Obtener una gráfica de tiempo que toma el método \texttt{doolitle} contra el orden de la matriz $n$.
+		      \end{enumerate}
+
+		\item
+
+		      Sobre el método de Crout.
+
+		      \begin{enumerate}[a)]
+			      \item
+
+			            Implementar dicho método en \texttt{python} llamado \texttt{crout}.
+
+			      \item
+
+			            Crear matrices $L_{n}$ y $U_{n}$ de orden $n\times n$ para $n=3,4,\dotsc,15$ como las mencionadas en el teorema $2$ del tema factorización $LU$ de la semana $3$, luego almacenar $A_{n}=L_{n}U_{n}$.
+
+			      \item
+
+			            Obtener la complejidad de dicho algoritmo de forma teórica.
+
+			      \item
+
+			            Del item b.
+			            Obtener una gráfica de tiempo que toma el método \texttt{crout} contra el orden de la matriz $n$.
+		      \end{enumerate}s
+
+		\item
+		      Sobre el método de Cholesky.
+
+		      \begin{enumerate}[a)]
+			      \item
+
+			            Implementar dicho método en \texttt{python} llamado \texttt{cholesky}.
+
+
+			      \item
+
+			            Crear una matriz $L_{n}$ de orden $n\times n$ para $n=3,4,\dotsc,15$ como las mencionadas en el teorema $6$ del tema factorización $LU$ de la semana $3$, luego almacenar $A_{n}=L_{n}L_{n}^{T}$.
+
+			      \item
+
+			            Obtener la complejidad de dicho algoritmo de forma teórica.
+
+			      \item
+
+			            Del ítem b.
+			            Obtener una gráfica de tiempo que toma el método \text{cholesky} contra el orden de la matriz $n$.
+		      \end{enumerate}
+
+	\end{enumerate}
+\end{frame}
+
+\end{document}

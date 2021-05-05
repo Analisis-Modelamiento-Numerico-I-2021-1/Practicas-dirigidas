@@ -22,14 +22,26 @@ jobs:
           shell: bash
           run: |
             cd /work/primera && arara primera.tex
+            cd /work/segunda && arara segunda.tex
 
       - name: "Tar files"
         run: |
-          tar --zstd -cf PDF.tar.zst primera/*.pdf
+          tar --zstd -cf PDF-primera.tar.zst primera/*.pdf
 
       - uses: actions/upload-artifact@v2
         with:
-          name: PDF-artifact
-          path: PDF.tar.zst
+          name: PDF-primera-artifact
+          path: PDF-primera.tar.zst
+          if-no-files-found: error
+          retention-days: 5
+
+      - name: "Tar files"
+        run: |
+          tar --zstd -cf PDF-segunda.tar.zst segunda/*.pdf
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: PDF-segunda-artifact
+          path: PDF-segunda.tar.zst
           if-no-files-found: error
           retention-days: 5

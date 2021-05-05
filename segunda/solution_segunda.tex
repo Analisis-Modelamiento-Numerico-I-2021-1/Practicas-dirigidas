@@ -1,0 +1,94 @@
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','log','nav',
+% arara: --> 'out','snm','toc','pytxcode','pdf']
+% arara: --> }
+% arara: lualatex: {
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: pythontex
+% arara: lualatex: {
+% arara: --> interaction: batchmode
+% arara: --> }
+% arara: clean: {
+% arara: --> extensions:
+% arara: --> ['aux','log','nav',
+% arara: --> 'out','snm','toc','pytxcode']
+% arara: --> }
+\PassOptionsToPackage{svgnames}{xcolor}
+\documentclass[
+	spanish,
+	9pt,
+	utf8,
+	xcolor=table,
+	handout,
+	aspectratio=1610,
+	professionalfonts,
+	% notheorems,
+	mathserif,
+	% t
+]{beamer}
+
+\usepackage[spanish,es-sloppy]{babel}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage[linesnumbered,ruled,boxed,vlined,spanish]{algorithm2e}
+\usepackage{algorithmicx}
+\usepackage{pythontex}
+
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+\newcounter{savedenum}
+\newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
+\newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\begin{document}
+
+\begin{frame}
+
+	\begin{enumerate}
+		\item
+		      Determine la notación de Landau de las siguientes funciones.
+
+		      \begin{multicols}{4}
+			      \begin{enumerate}[a)]
+				      \item
+				            $\dfrac{1}{n^{2}}$.
+
+				      \item
+				            $\cos\left(n\right)$.
+
+				      \item
+				            $\sin\left(\dfrac{x}{n}\right)$.
+
+				      \item
+				            $\sqrt{n+1}-\sqrt{n}$.
+			      \end{enumerate}
+		      \end{multicols}
+
+		      \begin{solution}
+			      \begin{enumerate}[a)]
+				      \item
+				            $\py{2}$.
+
+				      \item
+				            $\py{2}$.
+
+				      \item
+				            $\py{2}$.
+
+				      \item
+				            $\py{2}$.
+			      \end{enumerate}
+		      \end{solution}
+
+		      \saveenum
+	\end{enumerate}
+\end{frame}
+
+\end{document}
